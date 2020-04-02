@@ -24,8 +24,7 @@ public class Game {
         if (andereObject instanceof Game) {
             Game game = (Game)andereObject;
             return game.naam.equals(this.naam) &&
-                    game.releaseJaar == this.releaseJaar &&
-                    game.nieuwprijs == this.nieuwprijs;
+                    game.releaseJaar == this.releaseJaar;
         }
         return false;
     }

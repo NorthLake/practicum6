@@ -38,6 +38,18 @@ public class Persoon {
         return false;
     }
 
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> lijst) {
+        ArrayList<Game> nietInBezit = new ArrayList<Game>(lijst);
+        for (Game game1 : lijst) {
+            for (Game game2 : games) {
+                if (game1.equals(game2)) {
+                    nietInBezit.remove(game2);
+                }
+            }
+        }
+        return nietInBezit;
+    }
+
     @Override
     public String toString() {
         String result = naam + " heeft een budget van €" + String.format("%.2f", budget) + " en bezit de volgende games:";
